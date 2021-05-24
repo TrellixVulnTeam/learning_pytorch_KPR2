@@ -19,24 +19,21 @@ print(f'Prediction before training: f(5) = {forward_pass(5):.3f}')
 
 # Training
 learning_rate = 0.01
-n_iters = 50
+n_iters = 100
 
 
 for epoch in range(n_iters):
-
+    # prediction : forward_pass
     y_pred = forward_pass(X)
-
+    # calculate loss
     l = loss(Y, y_pred)
-
+    # back progpagation
     l.backward() # dl / dw
-
     # update weights
     with torch.no_grad():
         w -= learning_rate * w.grad
-
-    # zero gradients
+    # zero the gradients
     w.grad.zero_()
-
 
     if epoch % 1 == 0:
         print(f'epoch {epoch+1}: w = {w:.3f}, loss = {l:.8f}')
