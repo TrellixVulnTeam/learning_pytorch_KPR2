@@ -1,3 +1,8 @@
+"""
+based on
+https://jovian.ai/aakashns/05-cifar10-cnn
+"""
+
 import os
 import torch
 import torchvision
