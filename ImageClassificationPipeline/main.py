@@ -175,7 +175,7 @@ LEARNING_RATE = 0.001
 
 print('---------'*10)
 print('Starting Training....')
-# history = fit(NUM_EPOCHs, LEARNING_RATE, model, train_dl, val_dl, OPT_FUNC)
+history = fit(NUM_EPOCHs, LEARNING_RATE, model, train_dl, val_dl, OPT_FUNC)
 
 
 
